@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>java-test</groupId>
+    <artifactId>java-test</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+    </properties>
+
+    <modules>
+        <module>sdk-test</module>
+        <module>callback</module>
+        <module>heartbeat</module>
+        <module>filepath</module>
+        <module>jar-2</module>
+        <module>jar-3</module>
+        <module>java-effective</module>
+        <module>package</module>
+        <module>serialization</module>
+        <module>serilization-ex</module>
+        <module>syntax</module>
+        <module>unsafe</module>
+        <module>bigfile</module>
+        <module>connectionPool</module>
+        <module>crypto</module>
+        <module>gc</module>
+        <module>reflect</module>
+        <module>rpc-impl</module> 
+        <module>network</module>
+        <module>network/socket</module>
+        <module>token</module>
+        <module>io</module>
+        <module>rmi</module>
+        <module>nio</module>
+        <module>jmx</module>
+        <module>jvm</module>
+        <module>jmx-client</module>
+        <module>struts</module>
+        <module>algo</module>
+    </modules>
+
+    <scm>
+        <developerConnection>scm:git:https://github.com/glf2046/JavaTest</developerConnection>
+    </scm>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <tagBase>https://github.com/glf2046/JavaTest/tags</tagBase>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

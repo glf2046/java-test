@@ -1,0 +1,15 @@
+1. Server-client model
+
+    The typical situation is that client connects to server via Socket channel, server listens at a port,
+    for each incoming request, server will throw it to a separate thread(can be reusable thread pool), and
+    return the execution result if necessary.
+
+    So the logic here is for server to dispatch the request to thread(thread pool) and fetch the execution result from worker thread.
+
+    Model: Clients -(send requests via socket) -> server -(disassemble the request, wrap it as a standard task and dispatch it to) -> worker threads
+
+2. Future task is a wrapper of callable/runnable.
+
+    If it is a callable, future task will track the execution result and set the result to field member 'outcome',
+    and then we can call the 'get' method to get the result, internally it calls 'report' method to return the 'outcome'.
+    If it is a runnable, then there is no need to track the execution result.

@@ -1,0 +1,4 @@
+
+1. JAVA处理大文件，一般用BufferedReader，BufferedInputStream这类带缓冲的IO类，不过如果文件超大的话，更快的方式是采用MappedByteBuffer。
+2. 一般情况下效率排序： MappedByteBuffer > BufferedReader(bigger buffer size) > BufferedReader(smaller buffer size) > Scanner > RandomAccessFile (two slow as it's byte by byte read)
+

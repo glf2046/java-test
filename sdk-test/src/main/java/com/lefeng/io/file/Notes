@@ -1,0 +1,25 @@
+1. getResourceAsStream
+    1) If getting class file, it will get resource from the "classes" folder which is built output folder,
+        so the folder structure is like "E:\Dev\GitHub\java-test\sdk-test\target\classes", so you can specify
+        the package name or class name directly(if only class name, it will append the package name by calling 'getBaseName()' in class loader.
+
+        So normally we specify the resource name as:
+
+            InputStream is = this.getClass().getResourceAsStream("AbsOrRelativePath.class");
+
+    2) If getting non-class file, these files are normally resources, they are supposed to be copied over to
+        output folder directly without package name. e.g. E:\Dev\GitHub\java-test\sdk-test\target\classes\test.txt
+
+        So normally we specify the resource name as:
+
+            InputStream is = this.getClass().getResourceAsStream("/test.properties");
+
+        "/" means it's under the root output dir.
+
+2. java.io.File
+
+    1) Can use both absolute or relative file path, e.g.:
+
+            File file = new File("sdk-test/src/main/resources/test1/test.txt");   //root dir is the project default output folder which is determined by the env var of "user.dir".
+            File file = new File("E:\\Dev\\GitHub\\java-test\\sdk-test\\src\\main\\java\\com\\lefeng\\io\\file\\test.properties");
+
