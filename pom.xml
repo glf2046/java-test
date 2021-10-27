@@ -20,32 +20,37 @@
         <module>sdk-test</module>
         <module>callback</module>
         <module>heartbeat</module>
-        <module>filepath</module>
-        <module>jar-2</module>
-        <module>jar-3</module>
+        <module>filepathtest</module>
+        <module>jar-test-2</module>
+        <module>jar-test-3</module>
         <module>java-effective</module>
-        <module>package</module>
+        <module>package-test</module>
         <module>serialization</module>
         <module>serilization-ex</module>
-        <module>syntax</module>
-        <module>unsafe</module>
+        <module>syntax-test</module>
+        <module>unsafe-test</module>
         <module>bigfile</module>
         <module>connectionPool</module>
         <module>crypto</module>
         <module>gc</module>
-        <module>reflect</module>
+        <module>reflect-test</module>
         <module>rpc-impl</module> 
         <module>network</module>
         <module>network/socket</module>
-        <module>token</module>
+        <module>token-test</module>
         <module>io</module>
         <module>rmi</module>
         <module>nio</module>
         <module>jmx</module>
         <module>jvm</module>
         <module>jmx-client</module>
-        <module>struts</module>
+        <module>struts-test</module>
         <module>algo</module>
+        <module>java7-test</module>
+        <module>java8-test</module>
+        <module>SafePoint</module>
+        <module>Collections</module>
+        <module>jms</module>
     </modules>
 
     <scm>
